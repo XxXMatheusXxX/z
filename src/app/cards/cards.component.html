@@ -1,0 +1,25 @@
+<section>
+    <div class="product-list">
+        <h2>We Love Trend</h2>
+        <img src="./acabamento.png" alt="Coffee Icon" class="icon">
+        
+
+        <div class="filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Latest Products</button>
+            <button class="filter-btn">Best Seller</button>
+        </div>
+
+        <ul>
+            <li *ngFor="let product of products">
+                <img [src]="product.image" alt="{{product.name}}">
+                <h3>{{product.name}}</h3>
+                <div class="rating">{{product.rating}}</div>
+                <p>{{product.price | currency: 'BRL':'symbol'}}</p>
+                <div class="center">
+                    <button class="bot">Add to Bag</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
